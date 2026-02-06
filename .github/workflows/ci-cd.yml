@@ -40,7 +40,7 @@ jobs:
           
           # Clone repository using HTTPS URL without token
           git clone https://github.com/kachi79/GitOps-kube-argocd.git
-          cd gitOps-kube_argocd
+          cd gitOps-kube_argocd 
           
           if [[ "$OSTYPE" == "darwin"* ]]; then
             sed -i '' "s|image: ghcr.io/${{ github.repository }}:.*|image: ghcr.io/${{ github.repository }}:${{ github.sha }}|g" deployment.yaml
